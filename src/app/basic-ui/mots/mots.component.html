@@ -1,0 +1,48 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="center" style="font-family: system-ui;">Vérfication des mots<br><br> <font size="3">(mots coupés & Dictionnaire ASD)</font></h1>
+      <p class="white"></p>
+    </div>
+  </div>
+  <div class="wrapper">
+  <form name="upload" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+        <div class="upload">
+          <div class="center">
+          <i class="fa fa-file-pdf-o" style="font-size:48px;color:#fd1010;margin-top: 10px;margin-bottom: 10px;" aria-hidden="true"></i>
+          </div>
+          <div class="center" style="margin-left: 17px;">
+          <div class="btn-container">
+              <div class="upload-btn-wrapper">
+                  <button class="btn" style="font-family: system-ui; color: black; margin-bottom: 10px;">CHOISIR LE fichier PDF</button>
+                  <input type="file" class="upload-input" (change)="selectFile($event)" />
+
+
+              </div>
+        </div>
+        </div>  
+   </div>
+   <div class="center">
+        <div class="btn-container">
+            <div class="submit-btn-wrapper">
+              <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()" style="color: black; font-family: system-ui;">
+                Submit
+              </button>
+            </div>
+      </div>
+      </div>
+  </form>
+  <!--<div *ngIf="currentFile" class="progress my-3">
+  <div
+    class="progress-bar progress-bar-info progress-bar-striped"
+    role="progressbar"
+    attr.aria-valuenow="{{ progress }}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    [ngStyle]="{ width: progress + '%' }"
+  >
+    {{ progress }}%
+  </div> -->
+</div>
+<!-- <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div> -->

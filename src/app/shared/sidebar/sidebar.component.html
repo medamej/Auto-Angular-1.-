@@ -1,0 +1,50 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    
+    <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
+      <a class="nav-link" routerLink="/dashboard" routerLinkActive #dashboard="routerLinkActive">
+        <span class="menu-title">Dashboard</span>
+        <i class="mdi mdi-home menu-icon"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="uiBasicCollapsed = !uiBasicCollapsed" [attr.aria-expanded]="uiBasicCollapsed" aria-controls="ui-basic">
+        <span class="menu-title">Logiciel</span>
+        <i class="menu-arrow"></i>
+        <i class="mdi mdi-airplane"></i>
+      </a>
+      <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/scriptGene" routerLinkActive="active" #scriptGene="routerLinkActive">Géneration PTU</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive"></a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link" (click)="uiBasicCollapsed1 = !uiBasicCollapsed1" [attr.aria-expanded]="uiBasicCollapsed1" aria-controls="ui-basic">
+        <span class="menu-title">FPGA</span>
+        <i class="menu-arrow"></i>
+        <i class="mdi mdi-airplane"></i>
+      </a>
+      <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed1">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/conversion" routerLinkActive="active" #conversion="routerLinkActive">Conversion du .vhd<br> a .docx</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/analyseimpact" routerLinkActive="active" #analyseimpact="routerLinkActive">Analyse d'impact</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/couverture" routerLinkActive="active" #couverture="routerLinkActive">Vérification de la <br> couverture</a></li>
+         </ul>
+      </div>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link" (click)="samplePagesCollapsed = !samplePagesCollapsed"  [attr.aria-expanded]="samplePagesCollapsed" aria-controls="auth">
+        <span class="menu-title">Tech Pub</span>
+        <i class="menu-arrow"></i>
+        <i class="mdi mdi-airplane"></i>
+      </a>
+      <div class="collapse" id="auth" [ngbCollapse]="!samplePagesCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/mots" routerLinkActive="active" #mots="routerLinkActive"> Vérificaton mots </a></li>
+        </ul>
+      </div>
+    </li>    
+  </ul>
+</nav>

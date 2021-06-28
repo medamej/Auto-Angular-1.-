@@ -1,0 +1,180 @@
+.wrapper {
+      margin: 30px;
+      padding: 10px;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      border-radius: 10px;
+      background-color: white;
+      justify-content: center;
+      align-items: center;
+
+    }
+    ::ng-deep .progress-bar-info {
+      background-color: #171f20;
+    }
+  
+    ::ng-deep .progress-bar-striped {
+      background: #ffffff;
+    }
+  
+    ::ng-deep .progress-bar {
+      background-color: #c3e8ec;
+      border-radius: 2px;
+    }
+
+    .upload {
+      display: flex;
+      margin: 2px;
+      height: 130px;
+      border: 2px dashed #c3e8ec;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      display : block;
+    }
+
+    .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+
+    }
+    
+    .btn {
+      display: flex;
+      background-color: #c7e8ec;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding: 0px 8px 0px 10px;
+      height :50px;
+    }
+    
+    .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    .submit-btn-wrapper {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: 30px;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      background-color: white;
+
+
+    }
+    
+    .btn1 {
+      border: 2px solid black;
+      color: black;
+      background-color: rgb(50, 140, 243);
+      padding: 10px 40px;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom:20px;
+      margin-top: 60px;
+      margin-left: 10px;
+      margin-right: 50px;
+    }
+    
+    .submit-btn-wrapper input[type=file] {
+      font-size: 100px;
+      background-color: #327ba8;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 1;
+    }
+
+    .center{
+    text-align:center; 
+    width: 100%; 
+    }
+
+    #top{
+    margin-top:20px;  
+    }
+
+    .white{
+    color:black;
+    }
+
+    .imgupload{
+    color:#1E2832;
+    padding-top:0px;
+    font-size:4em;
+    }
+
+    #namefile{
+    color:black;
+    }
+
+    h4>strong{
+    color:#3fb2ff
+    }
+
+    .btn-primary{
+    border-color: #3fb2ff !important;
+    color: #2b2828;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #3fb2ff !important;
+    border-color: #3fb2ff !important;
+    margin-left: 50px;
+    }
+    
+    /*these two are set to not display at start*/
+    .imgupload.ok{
+    display:none;
+    color:green;
+    }
+    .imgupload.stop{
+    display:none;
+    color:blue;
+    }
+    
+    
+    /*this sets the actual file input to overlay our button*/ 
+    #fileup{
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    width:200px;
+    cursor: pointer;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    height: 50px;
+    }
+    
+    /*switch between input and not active input*/
+    #submitbtn{
+      padding:5px 50px;
+      display:none;
+    }
+    #fakebtn{
+      padding:5px 40px;
+    }
+    
+    
+    /*www.emilianocostanzo.com*/
+    #sign{
+      color:#1E2832;
+      position:fixed;
+      right:10px;
+      bottom:10px;
+      text-shadow:0px 0px 0px #1E2832;
+      transition:all.3s;
+    }
+    #sign:hover{
+      color:#1E2832;
+      text-shadow:0px 0px 5px #1E2832;
+    }
+
+    

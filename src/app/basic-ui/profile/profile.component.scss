@@ -1,0 +1,77 @@
+.tabulation-container{
+    margin-top: 2%;
+    width: 100%;
+  }
+  
+  
+  /* ADDED 19-05-2021*/
+  body{
+    margin-top:20px;
+    color: #1a202c;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  .main-body {
+    padding: 15px;
+  }
+  .card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+  }
+  
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+  }
+  
+  .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+  }
+  
+  .gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+  
+  /* Shared property btw user fields*/
+  .edit-user-info{
+    cursor: pointer;
+    color: rgb(12, 74, 146);
+  }
+  
+  .row .edit-user-info {
+    visibility:hidden;
+  }
+  
+  .row:hover .edit-user-info {
+    visibility:visible;
+  }
+  
+  .alert-right{
+    position: fixed;
+    top: 5em;
+    right: 2em;
+    width: fit-content;
+    z-index: 99 !important
+  }
+  
+  .alert-close{
+    text-decoration: none;
+    font-size: large;
+    color: #1a202c;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    padding: 5px;
+   }
+  
+  

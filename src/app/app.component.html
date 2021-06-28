@@ -1,0 +1,55 @@
+<div class="container-scroller">
+  <app-login *ngIf="!isLoggedIn"></app-login>
+  <app-navbar *ngIf="isLoggedIn"></app-navbar>
+  <div class="container-fluid page-body-wrapper" *ngIf="isLoggedIn">
+    <app-sidebar *ngIf="isLoggedIn"></app-sidebar>
+    <div class="main-panel" [ngClass]="{ 'main-panel-only' : !isLoggedIn }" >
+      <div class="content-wrapper">
+        <app-spinner *ngIf="isLoading"></app-spinner>
+        <div contentAnimate *ngIf="!isLoading" class="h-100" >
+          <router-outlet></router-outlet>
+        </div>
+        <div id="app" *ngIf="!isLoggedIn">
+          <nav class="navbar navbar-expand bg-white">
+            <a href="#" class="navbar-brand"></a>
+            <ul class="navbar-nav mr-auto" routerLinkActive="active">
+              <!--<li class="nav-item">
+                <a href="/home" class="nav-link" routerLink="home">Home </a>
+              </li> -->
+              <li class="nav-item" *ngIf="showAdminBoard">
+                <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+              </li>
+              <li class="nav-item" *ngIf="showModeratorBoard">
+                <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+              </li>
+              <li class="nav-item">
+                <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+              <li class="nav-item">
+                <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a href="/login" class="nav-link" routerLink="login">Login</a>
+              </li>
+            </ul>
+        
+            <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+              <li class="nav-item">
+                <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+              </li>
+              <li class="nav-item">
+                <a href class="nav-link" (click)="logout()">LogOut</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <app-footer *ngIf="isLoggedIn"></app-footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>
